@@ -5,7 +5,9 @@ import ImageGallery from './components/ImageGallery/ImageGallery';
 import Loader from './components/Loader/Loader';
 import LoadMoreBtn from './components/LoadMoreBtn/LoadMoreBtn';
 import ImageModal from './components/ImageModal/ImageModal';
-import styles from './App.module.css';
+import './App.css';
+
+
 
 const API_KEY = 'CqDhAJNmy_kUDnwJ8cfkrRwSNdq4N1wjUu37p9KjJ2E';
 const BASE_URL = 'https://api.unsplash.com/search/photos';
@@ -50,7 +52,7 @@ export default function App() {
   const handleCloseModal = () => setModalImage(null);
 
   return (
-    <div className={styles.app}>
+  <div className="app">
       <SearchBar onSubmit={handleSearch} />
       <ImageGallery images={images} onImageClick={handleImageClick} />
       {loading && <Loader />}
